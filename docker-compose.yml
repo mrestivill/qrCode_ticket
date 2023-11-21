@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  qr-ticket:
+    build: .
+    image: qr-ticket
+    container_name: qr-ticket
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    volumes:
+      - ./data:/app/data
